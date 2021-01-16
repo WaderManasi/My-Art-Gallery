@@ -1,5 +1,5 @@
 ## Art-Gallery Page
 - :relaxed: Just to showcase..
-  - Link: https://github.com/WaderManasi/My-Art-Gallery/tree/main
+  - Link: https://wadermanasi.github.io/My-Art-Gallery/
   
  - Third Party: Razorpay
