@@ -4,3 +4,4 @@
   
  - Third Party: Razorpay
 ![](https://github.com/WaderManasi/My-Art-Gallery/blob/main/1.JPG)
+![](2.JPG)
