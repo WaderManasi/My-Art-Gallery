@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="./images/titlelogo.png" type="image/jpeg">
+  <!--google fonts-->
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--custom css-->
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+    integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+    crossorigin="anonymous"></script>
+  <title>Art Gallery</title>
+
+</head>
+
+<body >
+  
+
+  <div class="container-fluid" id="myDiv">
+    <nav class="z-depth-2">
+      <div class="nav-wrapper ">
+        <a href="https://github.com/WaderManasi/My-Art-Gallery/tree/main" target="_blank" class="brand-logo" style="padding-left: 20px;"><i class="fab fa-github"></i></a>
+        <ul id="nav-mobile" class="nav right hide-on-med-and-down">
+          <li><a style="font-size:larger;" href="#gallery"><i class="fas fa-images"></i> Gallery</a></li>
+          <li><a style="font-size:larger;" href="./html/stationary.html"><i class="fa fa-cart-arrow-down"
+                aria-hidden="true"></i> Buy stationary <span class="new badge"></span></a></li>
+          <li><a style="font-size:larger;" href="#foot"><i class="fas fa-address-book"></i> Contact</a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <!--sidenav-->
+    <ul id="slide-out" class="sidenav">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img src="images/bg.png">
+          </div>
+          <a href="#user"><img class="circle"
+              src="data:image/jpeg;base64,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"></a>
+          <a href="#name"><span class="white-text name">Manasi Wader</span></a>
+
+          <a href="#email"><span class="white-text email"><i class="fab fa-instagram"
+                style="height: 15px;color: rgb(196, 167, 8);" aria-hidden="true"></i>@wmanasi_art06</span></a>
+        </div>
+      </li>
+      <li><a href="#paint" class="waves-effect"><i class="material-icons">chevron_right</i>Watercolor Paintings</a></li>
+      <li><a href="#pot" class="waves-effect"><i class="material-icons">chevron_right</i>Innovative</a></li>
+      <li><a href="#bow" class="waves-effect"><i class="material-icons">chevron_right</i>Best out of Waste</a></li>
+      <li><a href="#navratri" class="waves-effect"><i class="material-icons">chevron_right</i>Navratri </a></li>
+      <li><a href="#wallpaintings" class="waves-effect"><i class="material-icons">chevron_right</i>Wall Paintings </a></li>
+      <li>
+        <div class="divider1"></div>
+      </li>
+      <li><a class="subheader">About me</a></li>
+
+      <li><a class="waves-effect" target="_blank" href="https://wadermanasi.github.io/portfolio/">Portfolio</a></li>
+    </ul>
+    <!--end of sidenav-->
+
+    <div class="center">
+      <a href="#" data-target="slide-out"
+        class="view btn btn-large white-text waves-effect waves-light sidenav-trigger #0097a7 cyan darken-2 z-depth-4">
+        <i class="material-icons left">favorite</i>
+        View Artistic Stuff Here...
+      </a>
+      <div class="carousel ">
+        <a class="carousel-item z-depth-4" href="#one!"><img src="./images/paintings/ganesha-compressed.jpg" alt="logo"></a>
+        <a class="carousel-item " href="#eleven!"><img src="./images/paintings/birds-compressed.jpg"></a>
+        <a class="carousel-item" href="#two!"><img src="./images/paintings/flowers-compressed.jpg"></a>
+        <a class="carousel-item" href="#three!"><img src="./images/paintings/bridge-compressed.jpg"></a>
+        <a class="carousel-item" href="#four!"><img src="./images/paintings/bunny-compressed.jpg"></a>
+        <a class="carousel-item" href="#five!"><img src="./images/paintings/mandala-compressed.jpg"></a>
+        <a class="carousel-item" href="#six!"><img src="./images/paintings/orange-compressed.jpg"></a>
+        <a class="carousel-item" href="#seven!"><img src="./images/paintings/panda-compressed.jpg"></a>
+        <a class="carousel-item" href="#eight!"><img src="./images/paintings/peacock-compressed.jpg"></a>
+        <a class="carousel-item" href="#nine!"><img src="./images/paintings/tree-compressed.jpg"></a>
+        <a class="carousel-item" href="#ten!"><img src="./images/paintings/panda-compressed.jpg"></a>
+        <a class="carousel-item" href="#eleven!"><img src="./images/paintings/rose-compressed.jpg"></a>
+        <a class="carousel-item" href="#twelve!"><img src="./images/paintings/doll-compressed.jpg"></a>
+      </div>
+
+    </div>
+    <!--parallax-->
+    <div class="parallax-container">
+      <div class="parallax"><img src="./images/parallax3-compressed.jpg"></div>
+    </div>
+
+    <section id="gallery">
+
+      <!--water color-->
+      <section id="paint">
+        <div class="masonry">
+          <div class="item">
+            <h6 class="center">Chirping birds..</h6>
+            <img src="./images/paintings/birds-compressed.jpg" alt="Chirping birds">
+          </div>
+          <div class="item">
+            <h6 class="center">Charming flowers</h6>
+            <img src="./images/paintings/flowers-compressed.jpg" alt="Charming flowers">
+          </div>
+          <div class="item">
+            <h6 class="center">Doodles </h6>
+      <img src="./images/paintings/peacock-compressed.jpg" alt="Doodles">
+          </div>
+          <div class="item">
+            <h6 class="center">Pencil coloring</h6>
+            <img src="./images/paintings/ganesha-compressed.jpg" alt="Pencil coloring">
+          </div>
+          <div class="item">
+            <h6 class="center">Ganesha</h6>
+            <img src="./images/paintings/laptoop-compressed.jpg" alt="Ganesha">
+          </div>
+          <div class="item">
+            <h6 class="center">Tint & Shades</h6>
+            <img src="./images/paintings/tree-compressed.jpg" alt="Tint & Shades">
+            
+          </div>
+          <div class="item">
+            <h6 class="center">Water-melon </h6>
+            <img src="./images/paintings/watermelon-compressed.jpg" alt="Water-melon">
+          </div>
+          <div class="item">
+            <h6 class="center">Bunny </h6>
+            <img src="./images/paintings/bunny-compressed.jpg" alt="Bunny">
+          </div>
+          <div class="item">
+            <h6 class="center">Monochromatic mountains</h6>
+            <img src="./images/paintings/wash-compressed.jpg" alt="Monochromatic mountains">
+          </div>
+          <div class="item">
+            <h6 class="center">Spring</h6>
+            <img src="./images/paintings/bridge-compressed.jpg" alt="Spring">
+            
+          </div>
+          <div class="item">
+            <h6 class="center">Bright shades </h6>
+            <img src="./images/paintings/parrot-compressed.jpg" alt="Bright shades">
+            
+          </div>
+            <div class="item">
+              <h6 class="center">Orange </h6>
+            <img src="./images/paintings/orange-compressed.jpg" alt="Orange">
+          </div>
+          <div class="item">
+            <h6 class="center">Kalash </h6>
+          <img src="./images/paintings/kalsh.jpg" alt="Kalash">
+        </div>
+        <div class="item">
+          <h6 class="center">Mandala Art </h6>
+        <img src="./images/paintings/mandala-compressed.jpg" alt="Mandala Art">
+      </div>
+      <div class="item">
+        <h6 class="center">Rose</h6>
+            <img src="./images/paintings/rose-compressed.jpg" alt="Rose">
+        
+    </div>
+    <div class="item">
+      <h6 class="center">Sunflower </h6>
+    <img src="./images/paintings/sunflower-compressed.jpg" alt="Sunflower">
+  </div>
+  <div class="item">
+    <h6 class="center">Lamp </h6>
+  <img src="./images/paintings/quote-compressed.jpg" alt="Lamp">
+</div>
+<div class="item">
+  <h6 class="center">Pencil Sketch </h6>
+<img src="./images/paintings/sketch-compressed.jpg" alt="eyes">
+</div>
+<div class="item">
+  <h6 class="center">Design </h6>
+<img src="./images/paintings/design.jpg" alt="hen">
+</div>
+<div class="item">
+  <h6 class="center">Just..</h6>
+<img src="./images/paintings/panda-compressed.jpg" alt="Panda">
+</div>
+        </div>
+      </section>
+      
+      <div class="divider"></div>
+
+      <section id="pot">
+        <div class="masonry">
+          <div class="item">
+            <h6 class="center">Glass Painting</h6>
+            <img src="./images/paintings/glass-compressed.jpg">
+          </div>
+      
+          
+        </div>
+      </section>
+      
+      <div class="divider"></div>
+
+      <section id="bow">
+        <div class=" row masonry">
+          <div class="col s12">
+          <div class=" item">
+            <h6 class="center">Pista Shells</h6>
+            <img src="./images/paintings/doll-compressed.jpg">
+          </div>
+        </div>
+        <div class="col s12">
+          <div class="item">
+            <h6 class="center">Ice-cream sticks</h6>
+            <img src="./images/paintings/ice-cream-compressed.jpg">
+          </div>
+        </div>  
+          <div class="item">
+            <h6 class="center"></h6>
+            <img src="./images/paintings/sticks-compressed.jpg">
+          </div>
+          
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <section id="navratri">
+        <div class="masonry">
+          <div class="item">
+            
+            <img src="./images/paintings/nav_gray-compressed.jpg">
+          </div>
+          <div class="item">
+            
+            <img src="./images/paintings/nav_5-compressed.jpg">
+            
+          </div>
+          <div class="item">
+            
+            <img src="./images/paintings/nav_ora-compressed.jpg">
+            
+          </div>
+          <div class="item">
+            
+            <img src="./images/paintings/nav_6-compressed.jpg">
+          </div>
+          <div class="item">
+            
+            <img src="./images/paintings/nav_whte-compressed.jpg">
+            
+          </div>
+          <div class="item">
+            
+            <img src="./images/paintings/nav_7-compressed.jpg">
+          </div>
+          <div class="item">
+            
+            <img src="./images/paintings/nav_red-compressed.jpg">
+          </div>
+          <div class="item">
+            <img src="./images/paintings/nav_8-compressed.jpg">
+            <img src="./images/paintings/nav_9-compressed.jpg">
+          </div>
+      
+        </div>
+      </section>      
+    
+      <div class="divider"></div>
+
+      <section id="wallpaintings">
+        <div class="masonry">
+          <div class="item">
+            
+            <img src="./images/paintings/wall-birds.jpg">
+          </div>
+          
+      
+        </div>
+      </section>
+
+    </section>
+
+
+
+
+
+    <!--parallax-->
+    <div class="parallax-container">
+      <div class="parallax"><img src="./images/parallax4-compressed.jpg"></div>
+    </div>
+
+
+
+    <!--footer-->
+    <footer class="page-footer #f8bbd0 pink lighten-4">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12 ">
+            <h6 class="black-text">Do
+              Star <i class="fa fa-star"></i>
+              the Repository
+              <div class="chip">
+                <img src="https://image.flaticon.com/icons/png/512/25/25231.png">
+                <a href="https://github.com/WaderManasi/My-Art-Gallery/tree/main">Here</a>
+              </div>if you like it!
+            </h6>
+          </div>
+          <div class="rounded-social-buttons right">
+            <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i
+                class="fab fa-facebook-f"></i></a>
+            <a class="social-button linkedin" href="https://www.linkedin.com/in/manasiwader" target="_blank"><i
+                class="fab fa-linkedin"></i></a>
+            <a class="social-button instagram" href="https://www.instagram.com/wmanasi_art06/" target="_blank"><i
+                class="fab fa-instagram"></i></a>
+            <a class="social-button github" href="https://github.com/WaderManasi" target="_blank"><i
+                class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <div id="foot" class="footer-copyright z-depth-4 #ff5252 red accent-2">
+        <div class="center container ">
+          <h6>2021 © Made with <i class="fa fa-heart" aria-hidden="true"></i> by <a target="_blank"
+              href="https://wadermanasi.github.io/portfolio/"><b>Manasi Wader</b></a></h6>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+      //preloader javascript
+      var myVar;
+  
+      function myFunction() {
+        myVar = setTimeout(showPage, 1000);
+      }
+  
+      function showPage() {
+        document.getElementById("loader-wrapper").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+    </script>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+  integrity="sha512-k2WPPrSgRFI6cTaHHhJdc8kAXaRM4JBFEDo1pPGGlYiOyv4vnA0Pp0G5XMYYxgAPmtmv/IIaQA6n5fLAyJaFMA=="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./js/loader.js"></script>
+
+</html>
